@@ -1,0 +1,6 @@
+i have already give some task in live class. also do this 
+
+1. Create 5 classes and style them differently.
+2. Create a form and apply attribute selectors.
+3. Style 3 elements using IDs.
+4. Use group selector to style multiple tags at once.

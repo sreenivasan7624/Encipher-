@@ -1,0 +1,22 @@
+body {
+    background-color: #f7f9fc; 
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    padding: 20px;
+}
+.trophy-heading {
+    color: #ffd700; 
+    background-color: #003366;
+    padding: 10px 15px;
+    font-size: 30px;
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 5px;
+}
+.world-cup-box {
+    background-color: #004488; 
+    border: 3px solid #ffd700; 
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}

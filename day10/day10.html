@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Styling</title>
+    <style>
+        /* Task 4:styling multiple tags at same */
+        body,h1,h2,h3 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-palette: calc();
+        }
+        .style-1{
+            color:blue;
+            text-decoration: underline;
+        }
+        .style-2{
+            color: rgb(181, 59, 59);
+            font-weight: 900;
+            text-shadow: 10px;
+        }
+        .style-3{
+            color: red;
+            font-style: italic;
+        }
+        .style-4{
+            color: darkred;
+            display: flex;
+            background-color: orange;
+            margin: auto;
+            padding: 20px;
+
+        }
+        .style-5{
+            color: violet;
+            background-color: yellow;
+            font-weight: bolder;
+        }
+        /* Task 3:Style using ID's */
+        #header-main{
+            color: white;
+            background-color: aqua;
+            margin: 2px;
+            padding: 2px;
+            padding-left: 2px;
+            padding-right: 2px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+        #eleven{
+            color: darkblue;
+            box-shadow: inset;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #footer{
+            display: flex;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: large;
+            background-color: blueviolet;
+        }
+        /* Extra attributes and uses */
+        input[type="text"]{
+            border: 20px salmon;
+            padding: 8px;
+            margin: 5px 0;
+        }
+        input[type="email"] {
+            border: 15px dashed steelblue; 
+            padding: 8px;
+            margin: 5px 0;
+            width: 250px;
+    
+        }
+        input[type="number"] {
+           border: 10px double olive;   
+           padding: 8px;
+           margin: 5px 0;
+         width: 150px; 
+       }
+       input[type="password"] {
+            border: 5px ridge purple;     
+            padding: 8px;
+            margin: 5px 0;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header-main">
+        <h1>Day 10 Task</h1>
+    </div>
+    <hr>
+    <h2>Task 1: 5 classes with different styles</h2>
+    <h3 class="style-1"><a href="https://www.freepik.com/free-photo/abstract-textured-backgound_12073104.htm#fromView=keyword&page=1&position=0&uuid=8da1ea17-315d-407d-8cb9-9477df968505&query=Blue+color">This text is underlined and blue in colour</a></h3>
+    <h3 class="style-2">This text is bold and pink in colour</h3>
+    <h3 class="style-3">This text is italic and red in colour</h3>
+    <h3 class="style-4">This text is centered and with background colour of orange</h3>
+    <h3 class="style-5">This text is violet in colour and highlighted</h3>
+    <hr>
+    <h2 id="eleven">Task 2: Applying attributes for forms</h2>
+    <form>
+        <label>Name:</label><br>
+        <input name="Name" type="text" placeholder="Enter your name"><br>
+        <label>Password:</label><br>
+        <input name="Password" text="password" placeholder="Enter the password"><br>
+        <label>Email:</label><br>
+        <input name="Email" type="email" placeholder="Enter your mail"><br>
+        <label>Phone Number:</label><br>
+        <input name="number" type="number" placeholder="Enter your Phone no" maxlength="11" minlength="9"><br>
+        <input type="submit" value="Login">
+    </form>
+    <hr>
+    <div id="footer">
+        <footer>
+            2025 &copy; Copyrights by Sreenivasan S
+        </footer>
+    </div>
+    <hr>
+    
+</body>
+</html>
