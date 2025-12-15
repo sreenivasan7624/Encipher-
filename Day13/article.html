@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article (grammar) - Wiki Clone</title>
+    
+    <style>
+        :root {
+            --cl: #0645ad;
+            --cb: #f8f9fa;
+            --cd: #a2a9b1;
+            --ct: #202122;
+            --cs: #54595d;
+        }
+
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: var(--ct);
+            font-size: 15px;
+        }
+
+        a {
+            color: var(--cl);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .a {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 10px;
+        }
+
+        .b {
+            flex-grow: 1;
+            padding: 0 20px 20px 20px;
+            border-right: 1px solid var(--cd);
+        }
+
+        .c {
+            width: 250px;
+            flex-shrink: 0;
+            padding: 10px 20px;
+        }
+
+        .d {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 5px;
+        }
+
+        .d h1 {
+            font-size: 1.8em;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .e {
+            font-size: 0.85em;
+            padding-top: 5px;
+        }
+
+        .f {
+            margin-left: 15px;
+        }
+
+        .g {
+            border-bottom: 1px solid var(--cd);
+            margin-bottom: 15px;
+        }
+
+        .h {
+            display: inline-block;
+            padding: 8px 15px;
+            margin-bottom: -1px;
+            font-size: 0.9em;
+            border: 1px solid transparent;
+            border-bottom: none;
+        }
+
+        .i {
+            background-color: var(--cb);
+            border-color: var(--cd);
+            border-bottom: 1px solid var(--cb);
+            font-weight: bold;
+            color: var(--ct);
+        }
+
+        .j {
+            font-style: italic;
+            font-size: 0.85em;
+            margin-bottom: 15px;
+        }
+
+        .k p {
+            margin: 0.5em 0 1em 0;
+        }
+
+        .k h2 {
+            font-size: 1.4em;
+            border-bottom: 1px solid var(--cd);
+            padding-bottom: 3px;
+            margin: 1.5em 0 0.5em 0;
+            font-weight: normal;
+        }
+
+        .k h3 {
+            font-size: 1.2em;
+            margin: 1.5em 0 0.5em 0;
+            font-weight: normal;
+        }
+
+        .l {
+            font-size: 0.6em;
+            color: var(--cs);
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        .m {
+            font-size: 0.75em;
+            color: var(--cs);
+        }
+
+        .n {
+            font-size: 0.8em;
+            vertical-align: super;
+        }
+
+        .o {
+            background-color: #fceb9c;
+            border: 1px solid #f6c843;
+            padding: 8px 12px;
+            margin: 1em 0;
+            font-size: 0.9em;
+        }
+
+        .p {
+            margin: 1em 0 1em 1em;
+            padding-left: 1.5em;
+        }
+
+        .q {
+            font-style: italic;
+            margin: 1em 0 1em 20px;
+            padding-left: 10px;
+            border-left: 2px solid var(--cd);
+        }
+
+        .r {
+            border: 1px solid var(--cd);
+            padding: 10px;
+            font-size: 0.9em;
+        }
+
+        .s {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--cd);
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+        }
+
+        .s h3 {
+            font-size: 1em;
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+        }
+
+        .t h4 {
+            font-size: 0.95em;
+            margin: 10px 0 5px 0;
+            font-weight: bold;
+            color: var(--cs);
+        }
+
+        .u {
+            display: block;
+            margin-bottom: 3px;
+            cursor: pointer;
+        }
+
+        .u input[type="radio"] {
+            margin-right: 5px;
+            accent-color: var(--cl);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="a">
+
+        <main class="b">
+
+            <header class="d">
+                <h1>Article (grammar)</h1>
+                <div class="e">
+                    <span>A 78 languages</span>
+                    <a href="#" class="f">Read</a>
+                    <a href="#" class="f">Edit</a>
+                    <a href="#" class="f">View history</a>
+                    <a href="#" class="f">Tools ▾</a>
+                </div>
+            </header>
+
+            <nav class="g">
+                <a href="#" class="h i">Article</a>
+                <a href="#" class="h">Talk</a>
+            </nav>
+
+            <p class="j">From Wikipedia, the free encyclopedia</p>
+
+            <section class="k">
+                <p>
+                    In <a href="#">grammar</a>, an <strong>article</strong> is any member of a class of dedicated words that are used with <a href="#">noun</a> to the identifiability of object type or itself.
+                    <span class="m">[vague]</span> The category of articles constitutes a <a href="#">part of speech</a>.
+                </p>
+
+                <p>
+                    Articles combine with nouns to form noun phrases, and typically specify the grammatical <a href="#">definiteness</a> of the noun phrase. In <a href="#">English</a>, **the** and **a** (rendered as **an** when followed by a vowel sound) are the **definite** and **indefinite articles** respectively. Articles are part of a broader category called <a href="#">determiners</a>, which also include <a href="#">demonstratives</a>, <a href="#">possessive determiners</a>, and <a href="#">quantifiers</a>. In linguistic <a href="#">interlinear glossing</a>, articles are abbreviated as **art**.
+                </p>
+
+                <h2 id="types-of-article">Types of article <span class="l">[edit]</span></h2>
+
+                <h3 id="definite-article">Definite article <span class="l">[edit]</span></h3>
+
+                <div class="o">
+                    <strong>"Definite article" redirects here.</strong> For the comedy album, see <a href="#">Definite Article</a>.
+                </div>
+
+                <p>
+                    A <strong>definite article</strong> is an article that marks a <a href="#">definite noun phrase</a>. Definite articles, such as the English <strong>the</strong>, are used to refer to a particular member of a group. It may be something that the speaker has already mentioned, or it may be something uniquely specified.
+                </p>
+
+                <p>
+                    For example, Sentence 1 uses the definite article and thus expresses a request for a particular book. In contrast, Sentence 2 uses an indefinite article and thus conveys that the speaker would be satisfied with any book.
+                </p>
+
+                <ol class="p">
+                    <li>Give me the book.</li>
+                    <li>Give me a book.</li>
+                </ol>
+
+                <p>
+                    The definite article can also be used in English to indicate a specific class among other classes:
+                </p>
+
+                <blockquote class="q">
+                    The cabbage white butterfly lays its eggs on members of the <a href="#">Brassica</a> genus.
+                </blockquote>
+
+                <p>
+                    However, recent developments show that definite articles are morphological elements linked to certain noun types due to
+                    <a href="#">lexicalization</a>. Under this point of view, definiteness does not play a role in the selection of a definite article more than the lexical entry
+                    attached to the article. <span class="m">[clarification needed]</span><span class="n">[1][2]</span>
+                </p>
+            </section>
+        </main>
+
+        <aside class="c">
+            <div class="r">
+                <header class="s">
+                    <h3>Appearance</h3>
+                    <a href="#">hide</a>
+                </header>
+
+                <form class="t">
+                    <h4>Text</h4>
+                    <label class="u"><input type="radio" name="text-size" value="small"> Small</label>
+                    <label class="u"><input type="radio" name="text-size" value="standard" checked> Standard</label>
+                    <label class="u"><input type="radio" name="text-size" value="large"> Large</label>
+                    <label class="u"><input type="radio" name="text-size" value="xlarge"> XLarge</label>
+                    <label class="u"><input type="radio" name="text-size" value="width" disabled> Width</label>
+
+                    <h4>Width</h4>
+                    <label class="u"><input type="radio" name="width" value="standard" checked> Standard</label>
+                    <label class="u"><input type="radio" name="width" value="wide"> Wide</label>
+
+                    <h4>Color (beta)</h4>
+                    <label class="u"><input type="radio" name="color" value="automatic" checked> Automatic</label>
+                    <label class="u"><input type="radio" name="color" value="light"> Light</label>
+                    <label class="u"><input type="radio" name="color" value="dark"> Dark</label>
+                </form>
+            </div>
+        </aside>
+
+    </div>
+</body>
+</html>
