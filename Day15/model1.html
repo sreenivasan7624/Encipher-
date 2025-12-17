@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <style>
+        body {
+            background-color: #f0f7ff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .main {
+            background-color: #ffffff; 
+            width: 450px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+        }
+        h2 {
+            color: rgb(15, 154, 241);
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .sub-a {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        #in {
+            flex-grow: 1;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        .button1 {
+            background-color: rgb(15, 154, 241);
+            color: aliceblue;
+            border: 0;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .a, .b, .c {
+            display: flex;
+            align-items: center; 
+            padding: 10px 0;
+        }
+        .task-text {
+            flex-grow: 1;
+            margin-left: 15px;
+            font-size: 18px;
+            padding-top: 5px; 
+            padding-bottom: 5px;
+        }
+        .completed-text {
+            text-decoration: none;
+            color: #888;
+        }
+        .checkmark-box {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #007bff;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+        }
+        .button {
+            background-color: #dc3545;
+            color: white;
+            border: 0;
+            border-radius: 5px;
+            width: 80px;
+            height: 30px;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #eee; 
+            margin: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h2>Task Manager</h2>
+
+        <div class="sub-a">
+            <input type="text" placeholder="What needs to be done?" id="in">
+            <button class="button1">Add Task</button>
+        </div>
+
+        <div class="task">
+            
+            <div class="a">
+                <span class="checkmark-box"><i class="fa-solid fa-check"></i></span>
+                <p class="task-text completed-text" style="text-decoration: line-through;">Task A</p>
+                <button class="button">Remove</button>
+            </div>
+            <hr>
+
+            <div class="b">
+                <span class="checkmark-box"><i class="fa-solid fa-check"></i></span>
+                <p class="task-text completed-text" style="text-decoration: line-through;">Task B</p>
+                <button class="button">Remove</button>
+            </div>
+            <hr>
+
+            <div class="c">
+                <span class="checkmark-box"><i class="fa-solid fa-uncheck"></i></span> 
+                <p class="task-text">Task C</p>
+                <button class="button">Remove</button>
+            </div>
+            <hr>
+        </div>
+    </div>
+</body>
+</html>
