@@ -1,0 +1,30 @@
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.ctfassets.net/1fvlg6xqnm65/1dpEbIrkZhSjEdpanuU6lS/357119ada223eca2783403a6c0ba0afe/W16-HEADER-NEW.jpg?w=1920&q=75&fm=webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4; 
+    transition: opacity 0.5s ease;
+}
+body:hover::before {
+    opacity: 1;
+}  
+          
+button {
+    transition: transform 0.1s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: darkblue;             
+}
+
+button:active {
+    transform: scale(0.95);
+}
