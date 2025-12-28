@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Task:18 Menu-Based Program</h1>
+    <script>
+        const menu = prompt("Menu:1)ADD 2)SUBTRACT 3)MULTIPLY 4)DIVIDE/n Enter the choice:")
+        const a = Number(prompt("Enter the first number"));
+        const b = Number(prompt("Enter the second number"));
+        function add(a, b) {
+            return a + b;
+        }
+        function sub(a, b) {
+            return a - b;
+        }
+        function mul(a, b) {
+            return a * b;
+        }
+        function div(a, b) {
+            return a / b;
+        }
+        switch (menu) {
+            case "1":
+                alert(add(a, b));
+                break;
+            case "2":
+                alert(sub(a, b));
+                break;
+            case "3":
+                alert(mul(a, b));
+                break;
+            case "4":
+                alert(div(a, b));
+                break;
+            default:
+                alert("Invalid Choice");
+        }
+    </script>
+
+</body>
+
+</html>

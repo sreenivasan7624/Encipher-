@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Task:12 Reverse a number</h1>
+    <script>
+        let n = Number(prompt("Enter a number"));
+        let rev = 0;
+        function revn(n) {
+            while (n > 0) {
+                let d = n % 10;
+                rev = rev * 10 + d;
+                n = (n - d) / 10;
+            }
+            alert(rev);
+        }
+        revn(n)
+    </script>
+
+</body>
+
+</html>
