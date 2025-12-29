@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Task:1 Welcome Message Based On Time</h1>
+    <script>
+        const hour=Number(prompt("Enter the current hour"));
+        // if(hour<0&&hour>=24){
+        //     alert("Invalid hour");
+        // }
+        // else{
+            if(hour>=0&&hour<13){
+                alert("Good Morning!!")
+            }
+            else if(hour>=13&&hour<19){
+                alert("Good Afternoon!!")
+            }
+            else if(hour>=19&&hour<=23){
+                alert("Good Night!!")
+            }
+            else{
+                 alert("Invalid hour");
+            }
+        // }
+
+    </script>
+    
+</body>
+</html>

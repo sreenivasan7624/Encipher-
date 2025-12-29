@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Task:5 Temperature Converter</h1>
+    <script>
+        const choice=Number(prompt("1)Celsius to Fahrenheit 2)Fahrenheit to Celsius Enter the choice:"))
+        const input=Number(prompt("Enter the degree"));
+        function ctof(input){
+            let f=(input*1.8)+32;
+            alert(f+" F")
+        }
+        function ftoc(input){
+            let c=(input-32)*(5/9);
+            alert(c+" C")
+        }
+        switch(choice){
+            case 1:
+                ctof(input);
+                break;
+            case 2:
+                ftoc(input);
+                break;
+            default:
+                alert("Invalid choice");
+                break;
+
+        }
+    </script>
+</body>
+</html>

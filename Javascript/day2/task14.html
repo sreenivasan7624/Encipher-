@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Task:14 Student Result System</h1>
+    <script>
+        const s1=Number(prompt("Enter the first mark"));
+        const s2=Number(prompt("Enter the second mark"));
+        const s3=Number(prompt("Enter the third mark"));
+        let total=s1+s2+s3;
+        let avg=total/3;
+        if(avg>50&&avg<=100){
+            alert("Pass");
+        }
+        else if(avg<50){
+            alert("Fail");
+        }
+        else{
+            alert("Invalid");
+        }
+    </script>
+</body>
+</html>

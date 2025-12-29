@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Task:13 Power of a number</h1>
+    <script>
+        const base=Number(prompt("Enter the base"));
+        const exponent=Number(prompt("Enter the exponent"));
+        let val=1;
+    
+        for(let i=1;i<=exponent;i++){
+            // val=base*i;//2*1
+            // val=val*i;//2*1
+
+
+            // //2**3    2*2*2
+            val*=base;
+        }
+        alert(val)
+    </script>
+</body>
+</html>
