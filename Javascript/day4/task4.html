@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Task:4 Word Counter</h1>
+    <script>
+        let sent = prompt("Enter the sentence");
+        let k = sent.split(" ");
+        let count = 0;
+        for (let i = 0; i < k.length; i++) {
+            if (k[i].trim() !== "") {
+                count++;
+            }
+        }
+        alert(count);
+    </script>
+
+</body>
+
+</html>

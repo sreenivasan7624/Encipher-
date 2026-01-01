@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Task:12 Title Case</h1>
+    <script>
+        let sent = prompt("Enter a sentence:").toLowerCase();
+        let words = sent.split(" ");
+        for (let i = 0; i < words.length; i++) {
+            if (words[i].length > 0) {
+                words[i] = words[i][0].toUpperCase() + words[i].substring(1);
+            }
+        }
+        alert(words.join(" "));
+    </script>
+</body>
+</html>
