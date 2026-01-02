@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Task:17 Anagram</h1>
+    <script>
+        let s1=prompt("Enter the first string");
+        let s2=prompt("Enter the second string");
+        let str1=s1.split('').sort().join('');
+        let str2=s2.split('').sort().join('');
+        if(str1===str2){
+            alert("Anagram")
+        }
+        else{
+            alert("Not an Anagram")
+        }
+    </script>
+</body>
+</html>

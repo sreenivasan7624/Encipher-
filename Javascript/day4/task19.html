@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Task:19 Extract numbers from strings</h1>
+    <script>
+        let str=prompt("Enter the string");
+        let org="";
+        for(let i=0;i<str.length;i++){
+            if(str[i]>=0&&str[i]<=9){
+                org+=str[i];
+            }
+        }
+        alert(org);
+    </script>
+</body>
+</html>

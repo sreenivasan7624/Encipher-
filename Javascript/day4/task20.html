@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Task:20 Password Strength Checker</h1>
+    <script>
+        let pass=prompt("Enter the password");
+        let count=false;
+        let count1=false;
+        let count2=false;
+        if(pass.length>5&&pass.length<20){
+                count1=true;
+            }
+        for(let i=0;i<pass.length;i++){
+            
+            if(pass[i]>=0&&pass[i]<=9){
+                count2=true;
+            }
+            else if(pass[i]>="A"&&pass[i]<="Z"){
+                count3=true;
+            }
+        }
+        if(count&&count2&&count3){
+            alert("Valid Password")
+        }
+        else{
+            alert("Invalid Password")
+        }
+    </script>
+</body>
+</html>

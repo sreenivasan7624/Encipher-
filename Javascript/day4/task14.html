@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Task:14 Repeated Characters</h1>
+    <script>
+        let r=prompt("Enter a string");
+        let s="";
+        for(let i=0;i<r.length;i++){
+            if(r.indexOf(r[i])!==r.lastIndexOf(r[i])&&!s.includes(r[i])&&r[i]!==" "){
+                s+=r[i];
+            }
+        }
+        alert(s)
+    </script>
+</body>
+</html>
