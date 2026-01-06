@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Task:21</h1>
+    <input type="text" id="ed">
+    <p id="res">Preview</p>
+    <p id="coun">Count</p>
+</body>
+<script>
+    const a=document.getElementById("ed");
+    const b=document.getElementById("res");
+    const c=document.getElementById("coun");
+    a.addEventListener("input",function(e){
+        if(e.target.value.length > 0){
+            b.textContent=e.target.value;
+            c.textContent=e.target.value.length;
+
+        }
+        else{
+            b.textContent="...";
+
+        }
+    })
+</script>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Task:18</h1>
+    <select name="" id="sele">
+        <option value="">Choose anyone</option>
+        <option value="Apple">Apple</option>
+        <option value="Banana">Banana</option>
+        <option value="Carrot">Carrot</option>
+    </select>
+    <div id="res">Not Selected</div>
+    <script>
+        const a=document.getElementById("sele");
+        const res=document.getElementById("res")
+        a.addEventListener("change",function(e){
+            const val=e.target.value;
+            if(val=="Apple"){
+                document.body.style.backgroundColor="red";
+                // res.textContent="Not selected";
+            }
+             else if(val=="Banana"){
+                document.body.style.backgroundColor="yellow";
+            } else if(val=="Carrot"){
+                document.body.style.backgroundColor="orange";
+               
+            }
+            else{
+                res.textContent="Not selected";
+            }
+        })
+
+    </script>
+</body>
+</html>

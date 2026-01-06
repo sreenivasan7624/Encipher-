@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Task:27,28</h1>
+    <div id="parent">
+        <button>Parent</button>
+        <div id="child"><button>Child</button></div>
+    </div>
+</body>
+<script>
+    const a=document.getElementById("parent")
+    const b=document.getElementById("child")
+    a.addEventListener("click",function(e){
+        alert("Parent Clicked")
+    })
+    b.addEventListener("click",function(e){
+        e.stopPropagation();
+        alert("Child Clicked without parent known")
+    })
+</script>
+</html>

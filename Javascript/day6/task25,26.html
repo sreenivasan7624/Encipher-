@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>task:25,26</h1>
+    <div id="parent">
+        PARENT
+        <div id="child"><button>Child</button></div>
+    </div>
+</body>
+<script>
+    const a=document.getElementById("parent")
+    const b=document.getElementById("child")
+    a.addEventListener("click",(e)=>{
+        alert("2.Parent clicked")  
+    })
+    b.addEventListener("click",(e)=>{
+        alert("1.Child clicked")  
+    })
+</script>
+</html>

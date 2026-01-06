@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Task:19</h1>
+    <input type="text" id="sel">
+    <p id="rev" style="display: none;">Input field</p>
+</body>
+<script>
+    const a=document.getElementById("sel")
+    const p=document.getElementById("rev")
+    a.addEventListener("focus",function(e){
+        a.style.backgroundColor="lightgreen"
+        p.style.display="inline"
+
+    })
+    a.addEventListener("blur",function(e){
+        a.style.backgroundColor="white"
+        p.style.display="none"
+
+    })
+</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="lets" style="display: inline;justify-content: center;text-align: center;background-color: antiquewhite;">Task:8</h1>
+    <h1 id="let" style="display: none;background-color: aqua;padding: 10px;">Hover over me!</h1>
+    <script>
+        const letss=document.getElementById("lets")
+        const lett=document.getElementById("let")
+        letss.addEventListener('mouseenter',function (e){
+            lett.style.display="inline"
+        })
+        letss.addEventListener('mouseleave',function (e){
+            lett.style.display="none"
+        })
+
+    </script>
+</body>
+</html>
