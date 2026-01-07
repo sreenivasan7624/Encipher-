@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Task:6</h1>
+    <button id="taskes" style="border: 1px solid black;margin:10px;padding: 10px;">Cancel</button> 
+    <script>
+    const a=document.getElementById("taskes")
+    
+    const d=setTimeout(() => {
+        alert("Displayed after 5 seconds")
+    },5000);
+    a.addEventListener("click",(e)=>{
+        clearTimeout(d);
+    })
+
+    </script>
+</body>
+</html>

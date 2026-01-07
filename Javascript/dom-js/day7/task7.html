@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Task:7 prints every second until 10 seconds</h1>
+    <p id="li">Preview</p>
+    <script>
+        const a =document.getElementById("li");
+        let b=0;
+            const e=setInterval(() => {
+                b++;
+                a.textContent=b;
+                if(b>=10){
+                    clearInterval(e);
+                }
+            }, 1000);
+
+    </script>
+</body>
+</html>

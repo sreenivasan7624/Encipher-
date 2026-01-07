@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Task:3 Current time every second Task:4 Counter increments evry second</h1>
+    <p id="len">Prev</p>
+    <script>
+        let k=0;
+        const a=document.getElementById("len")
+        setInterval(() => {
+            let t=new Date();
+            console.log(t)
+        },1000);
+        setInterval(() => {
+            k++;
+            a.textContent=k;
+        },1000);
+    </script>
+</body>
+</html>

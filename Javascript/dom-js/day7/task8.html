@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Task:8 Start and stop for a counter</h1>
+    <button id="btn1" onclick="start()">Start</button>
+    <button id="btn2" onclick="stopp()">Stop</button>
+    <p id="prev">Content</p>
+    <script>
+        const a =document.getElementById("btn1");
+        const b =document.getElementById("btn2");
+        const c =document.getElementById("prev");
+        let k=0;
+        let j;
+        function start(){
+             j=setInterval(() => {
+                k++;
+             c.textContent= k; 
+            },1000);
+        }
+        function stopp(){
+            clearInterval(j)
+        }
+
+    </script>
+</body>
+</html>

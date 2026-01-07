@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Task:9 change background of only clicked</h1>
+    <ul id="parent">
+        <li style="display: inline; border: 1px solid black;padding: 10px;" onclick="cld1(this)">Child1</li>
+        <li style="display: inline; border: 1px solid black;padding: 10px;" onclick="cld2(this)">Child2</li>
+        <li style="display: inline; border: 1px solid black;padding: 10px;" onclick="cld3(this)">Child3</li>
+    </ul>
+    <script>
+        
+        function cld1(element){
+            element.style.backgroundColor="red"
+        }
+        function cld2(element){
+            element.style.backgroundColor="green"
+        }
+        function cld3(element){
+            element.style.backgroundColor="blue"
+        }
+    </script>
+
+</body>
+</html>
