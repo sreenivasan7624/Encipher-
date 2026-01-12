@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style3.css">
+    <style>
+ .main-bg {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  background: linear-gradient(to bottom, #0099ff, #0066ff);
+}
+.calculator-card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 320px;
+}
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 12px;                           
+  margin-top: 20px;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.red{
+    border: none;
+    background-color: red;
+}
+.red2{
+     border: none;
+  border-radius: 8px;
+  padding: 15px;
+  font-weight: bold;
+  cursor: pointer;
+    width: 90px;
+    background-color: red;
+}
+.display{
+    text-align: end;
+    padding: 20px;
+}
+
+        
+
+    </style>
+</head>
+<body class="main-bg">
+  <div class="calculator-card">
+    <input type="text" id="display2" style="width: 300px;height: 40px;justify-content: center;align-items: center;display: flex;"> 
+    <div class="button-grid">
+      <button class="btn op" onclick="append('+')">+</button>
+      <button class="btn op" onclick="append('-')">-</button>
+      <button class="btn op" onclick="append('*')">*</button>
+      <button class="btn op" onclick="append('/')">/</button>
+      <button class="btn op" onclick="append('7')">7</button>
+      <button class="btn op" onclick="append('8')">8</button>
+      <button class="btn op" onclick="append('9')">9</button>
+      <button class="btn op" onclick="append('4')">4</button>
+      <button class="btn op" onclick="append('5')">5</button>
+      <button class="btn op" onclick="append('6')">6</button>
+      <button class="btn op" onclick="append('1')">1</button>
+      <button class="btn op" onclick="append('2')">2</button>
+      <button class="btn op" onclick="append('3')">3</button>
+      <button class="btn op" onclick="append('0')">0</button>
+      <button class="btn op" onclick="append('.')">.</button>
+      <button class="btn red" onclick="clearInput()">C</button>
+      <button class="red2" onclick="calculate()">=</button>
+      </div>
+  </div>
+</body>
+<script>
+  const a=document.getElementById("display2")
+  function append(input){
+    a.value+=input;
+  }
+  function clearInput(){
+    a.value="";
+  }
+  function calculate() {
+    const value=a.value
+    if(!/\d/.test(value)){//regex is used here to check if there is one number
+      a.value="Error"
+      return//stops the function
+    }
+    try{
+      a.value=eval(a.value)
+    }
+    catch(e){
+      a.value="Error"//if eval error occurs then show error
+    }
+  }
+</script>
+</html>
