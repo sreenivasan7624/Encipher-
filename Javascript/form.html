@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+</head>
+
+<body style="font-family: Arial; background-color:#f2f2f2;">
+
+<form id="myForm" style="
+    width:400px;
+    margin:20px auto;
+    padding:15px;
+    background-color:white;
+    border:1px solid #ccc;
+">
+
+    <h2 style="text-align:center;">Registration Form</h2>
+
+    <label>Name:</label><br>
+    <input type="text" id="name" style="width:100%; padding:5px;"><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" id="email" style="width:100%; padding:5px;"><br><br>
+
+    <label>Password:</label><br>
+    <input type="password" id="password" style="width:100%; padding:5px;"><br><br>
+
+    <label>Date of Birth:</label><br>
+    <input type="date" id="dob" style="width:100%; padding:5px;"><br><br>
+
+    <label>Gender:</label><br>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="radio" name="gender" value="Other"> Other
+    <br><br>
+
+    <label>Address:</label><br>
+    <textarea id="address" style="width:100%; padding:5px;"></textarea><br><br>
+
+    <label>Country:</label><br>
+    <select id="country" style="width:100%; padding:5px;">
+        <option>Select Country</option>
+        <option>India</option>
+        <option>USA</option>
+        <option>UK</option>
+    </select><br><br>
+
+    <input type="checkbox" id="terms"> I accept terms and conditions<br><br>
+
+    <button type="button" onclick="saveData()" style="
+        width:100%;
+        padding:8px;
+        background-color:#4CAF50;
+        color:white;
+        border:none;
+        cursor:pointer;
+    ">
+        Submit
+    </button>
+</form>
+
+<br>
+
+<table border="1" id="dataTable" style="
+    width:90%;
+    margin:auto;
+    border-collapse:collapse;
+    background-color:white;
+">
+    <tr style="background-color:#ddd;">
+        <th>Name</th>
+        <th>Password</th>
+        <th>Email</th>
+        <th>DOB</th>
+        <th>Gender</th>
+        <th>Country</th>
+        <th>Address</th>
+        <th>Action</th>
+    </tr>
+</table>
+
+<script>
+let editIndex = -1;
+
+function saveData() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let dob = document.getElementById("dob").value;
+    let address = document.getElementById("address").value;
+    let country = document.getElementById("country").value;
+    let gender = document.querySelector('input[name="gender"]:checked');
+    let terms = document.getElementById("terms").checked;
+
+    if (name == "" || email == "" || password == "" || dob == "" ||
+        address == "" || country == "Select Country" || gender == null) {
+        alert("Please fill all fields");
+        return;
+    }
+
+    if (!terms) {
+        alert("Please accept terms and conditions");
+        return;
+    }
+
+    let user = {
+        name: name,
+        email: email,
+        password: password,
+        dob: dob,
+        gender: gender.value,
+        address: address,
+        country: country
+    };
+
+    let data = localStorage.getItem("users");
+    let list;
+
+    if (data == null) {
+        list = [];
+    } else {
+        list = JSON.parse(data);
+    }
+
+    if (editIndex >= 0) {
+        list[editIndex] = user;
+        editIndex = -1;
+    } else {
+        list.push(user);
+    }
+
+    localStorage.setItem("users", JSON.stringify(list));
+    showData();
+    clearForm();
+}
+
+function showData() {
+    let table = document.getElementById("dataTable");
+
+    table.innerHTML = `
+        <tr style="background-color:#ddd;">
+            <th>Name</th>
+            <th>Password</th>
+            <th>Email</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>Country</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+    `;
+
+    let data = localStorage.getItem("users");
+
+    if (data != null) {
+        let list = JSON.parse(data);
+
+        for (let i = 0; i < list.length; i++) {
+            table.innerHTML += `
+            <tr>
+                <td>${list[i].name}</td>
+                <td>${list[i].password}</td>
+                <td>${list[i].email}</td>
+                <td>${list[i].dob}</td>
+                <td>${list[i].gender}</td>
+                <td>${list[i].country}</td>
+                <td>${list[i].address}</td>
+                <td>
+                    <button onclick="editData(${i})">Edit</button>
+                    <button onclick="deleteData(${i})">Delete</button>
+                </td>
+            </tr>
+            `;
+        }
+    }
+}
+
+function editData(index) {
+    let list = JSON.parse(localStorage.getItem("users"));
+
+    document.getElementById("name").value = list[index].name;
+    document.getElementById("email").value = list[index].email;
+    document.getElementById("password").value = list[index].password;
+    document.getElementById("dob").value = list[index].dob;
+    document.getElementById("address").value = list[index].address;
+    document.getElementById("country").value = list[index].country;
+    document.querySelector(
+        'input[name="gender"][value="' + list[index].gender + '"]'
+    ).checked = true;
+
+    document.getElementById("terms").checked = true;
+    editIndex = index;
+}
+
+function deleteData(index) {
+    let list = JSON.parse(localStorage.getItem("users"));
+    list.splice(index, 1);
+    localStorage.setItem("users", JSON.stringify(list));
+    showData();
+}
+
+function clearForm() {
+    document.getElementById("myForm").reset();
+}
+
+window.onload = showData;
+</script>
+
+</body>
+</html>
