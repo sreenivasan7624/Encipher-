@@ -1,0 +1,28 @@
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vb;
+  text-align: center;
+  background: linear-gradient(blue,red);
+}
+.run{
+width: 290px;
+height: 50px;
+color: white;
+background-color: black;
+text-size-adjust: 20px;
+}
+.cal{
+  display: grid;
+  width: 300px;
+  height: 300px;
+  grid-template-columns: auto auto auto;
+  color: white;
+  
+}
+.last{
+  width: 300px;
+  height: 50px;
+  
+}
